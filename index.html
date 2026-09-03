@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUFF BOT 🎭💀 | Certified Useless Project</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1>BLUFF BOT 🎭💀</h1>
+            <p class="badge">CERTIFIED USELESS PROJECT™</p>
+            <p class="subtitle">gives answers with FULL confidence, zero accuracy guarantee fr fr 🎤🔥</p>
+        </header>
+
+        <!-- Main Content Area -->
+        <main>
+            <!-- Input Card -->
+            <section id="inputCard">
+                <label for="questionInput">💬 ASK IT LITERALLY ANYTHING</label>
+                <input type="text" id="questionInput" placeholder="e.g. entha WiFi ninte real nam" autocomplete="off">
+                <button type="button" id="askBtn">ASK BESTIE 🚀</button>
+            </section>
+
+            <!-- Answer Container (Hidden by default) -->
+            <section id="answerCard" hidden>
+                <h2>100% Legit Lore • No Cap 🗣️</h2>
+                <p id="questionRecap"></p>
+                <p id="answerText"></p>
+
+                <div class="verdict-controls">
+                    <p>Pass your vibe check bro:</p>
+                    <button type="button" id="wrongBtn">❌ THALLU! (You're Wrong)</button>
+                    <button type="button" id="rightBtn">✅ YOU'RE RIGHT?! (Cringe 🙈)</button>
+                </div>
+            </section>
+
+            <!-- Reaction Card (Hidden by default) -->
+            <section id="reactionCard" hidden>
+                <h2 id="reactionHeader">Bot Reaction</h2>
+                <p id="reactionText"></p>
+                <button type="button" id="askAnotherBtn">ASK ANOTHER YAPPING SESSION 🔄</button>
+            </section>
+        </main>
+
+        <!-- Rounds Counter Pill -->
+        <div class="rounds-counter">
+            rounds played: <span id="roundsCount">0</span> 💀
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>made for Useless Projects hackathon • 0% useful, 100% vibes ✨</p>
+        </footer>
+    </div>
+</body>
+
+</html>
