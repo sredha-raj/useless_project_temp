@@ -57,29 +57,29 @@
                         autocomplete="off">
 
                     <button type="button" id="askBtn" class="btn">
-                        Ask Bestie
+                        Ask Bestie 🚀
                     </button>
                 </div>
             </section>
 
-            <!-- Answer Container (Hidden by default) -->
+            <!-- Answer Container (Hidden by default, used for loading & response) -->
             <section id="answerCard" hidden>
                 <div class="card-header-bar">
-                    <h2>100% LEGIT LORE UNVERIFIED</h2>
+                    <h2 id="answerHeader">🤔 BLUFF BOT SAID (WITH FULL CHEST):</h2>
                 </div>
 
                 <div class="card-body">
                     <p id="questionRecap"></p>
                     <p id="answerText"></p>
 
-                    <div class="verdict-controls">
+                    <div id="verdictControls" class="verdict-controls">
                         <p class="verdict-prompt">PASS THE VIBE CHECK BESTIE:</p>
                         <div class="verdict-buttons-row">
                             <button type="button" id="wrongBtn" class="btn">
-                                ❌ Thallu Bestie!
+                                ❌ ITHU MAAYAM
                             </button>
                             <button type="button" id="rightBtn" class="btn">
-                                ✅ Wait Cooked?!
+                                ✅ SHERI AANU
                             </button>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
             <!-- Reaction Card (Hidden by default) -->
             <section id="reactionCard" hidden>
                 <div class="card-header-bar">
-                    <h2 id="reactionHeader">BOT REACTION LOG</h2>
+                    <h2 id="reactionHeader">BOT REACTION LOG 💅</h2>
                 </div>
 
                 <div class="card-body">
@@ -113,8 +113,8 @@
         </footer>
     </div>
 
-    <!-- Script Logic -->
-    <script src="script.js"></script>
+    <!-- Live AI Chatbot Engine -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

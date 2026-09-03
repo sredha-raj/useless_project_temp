@@ -496,7 +496,37 @@ footer {
   box-shadow: 2px 2px 0px var(--black-comic);
 }
 
+/* AI Loading & Typing State Styles */
+.loading-pulse {
+  display: inline-block;
+  font-family: var(--font-groovy);
+  font-size: 1.05rem;
+  color: var(--pink-hot);
+  animation: pulseOpacity 1.2s infinite ease-in-out;
+}
+
+@keyframes pulseOpacity {
+  0%, 100% { opacity: 0.5; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.typing-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-groovy);
+  font-size: 1.1rem;
+  color: var(--pink-hot);
+  animation: bounceDot 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes bounceDot {
+  from { transform: translateY(0); }
+  to { transform: translateY(-4px); }
+}
+
 /* Hidden Utility */
 [hidden] {
   display: none !important;
 }
+
