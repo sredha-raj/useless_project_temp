@@ -1,0 +1,502 @@
+/* ==========================================================================
+   BLUFF BOT - GIRLY POP COMIC BOOK AESTHETIC
+   Featuring Pink Action Burst Background & Groovy Bubble Typography
+   ========================================================================== */
+
+/* Google Fonts: Rubik Bubbles, Shrikhand (Groovy Vibes), Modak & Fredoka */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Modak&family=Rubik+Bubbles&family=Shrikhand&display=swap');
+
+:root {
+  /* Girly Pop Color Palette */
+  --pink-hot: #ff2a85;
+  --pink-bubblegum: #f472b6;
+  --pink-pastel: #fce7f3;
+  --pink-card-bg: #fff5f8;
+  --yellow-sparkle: #fde047;
+  --yellow-light: #fef9c3;
+  --lavender-cute: #e9d5ff;
+  --mint-accent: #6ee7b7;
+  --black-comic: #18181b;
+  --white-pure: #ffffff;
+
+  /* Typography matching "Bubble Pop" & "Groovy Vibes" */
+  --font-bubble: 'Rubik Bubbles', cursive, sans-serif;
+  --font-groovy: 'Shrikhand', cursive, sans-serif;
+  --font-body: 'Fredoka', cursive, sans-serif;
+
+  /* Comic Tokens */
+  --border-comic: 3px solid var(--black-comic);
+  --border-comic-thick: 3.5px solid var(--black-comic);
+  --radius-bubble: 24px;
+  --radius-pill: 9999px;
+  --shadow-comic: 4px 5px 0px var(--black-comic);
+  --shadow-comic-lg: 6px 7px 0px var(--black-comic);
+  --shadow-pill: 3px 3px 0px var(--black-comic);
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  /* Clean High-Res Pink Comic Halftone Burst Background from Pinterest */
+  background-color: #fbcfe8;
+  background-image: url('assets/pink-comic-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: var(--font-body);
+  color: var(--black-comic);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px 16px 50px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle Comic Halftone Dot Overlay for depth */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 11%);
+  background-size: 16px 16px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main Container */
+.app-container {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Top Badges Row */
+.top-badge-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge-yellow,
+.verified-thallu,
+.keralanedition {
+  background: var(--yellow-sparkle);
+  color: var(--black-comic);
+  border: var(--border-comic);
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+  font-family: var(--font-groovy);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-badge-row .tape-left {
+  transform: rotate(-3deg);
+}
+
+.top-badge-row .tape-right {
+  transform: rotate(3deg);
+}
+
+/* Header Section */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Hero Title: Bubble Pop & Groovy Display */
+h1.bluff-bot-title {
+  font-family: var(--font-bubble);
+  font-size: 3.2rem;
+  color: var(--white-pure);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 
+    -3px -3px 0 var(--black-comic),
+     3px -3px 0 var(--black-comic),
+    -3px  3px 0 var(--black-comic),
+     3px  3px 0 var(--black-comic),
+     4px  5px 0px var(--pink-hot),
+     6px  7px 0px var(--black-comic);
+  transform: rotate(-1.5deg);
+  animation: gentleWiggle 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes gentleWiggle {
+  0% { transform: rotate(-1.5deg) scale(1); }
+  100% { transform: rotate(1.5deg) scale(1.02); }
+}
+
+/* Certified Useless Badge: Dark Magenta / Hot Pink */
+.badge-purple,
+.certified-useless {
+  background: var(--pink-hot);
+  color: var(--white-pure);
+  border: var(--border-comic);
+  border-radius: var(--radius-pill);
+  padding: 6px 20px;
+  font-family: var(--font-groovy);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-pill);
+  display: inline-block;
+  text-shadow: 1px 1px 0px var(--black-comic);
+}
+
+/* Tagline with SAME FONT as "rounds audited" (Shrikhand) */
+.tagline {
+  font-family: var(--font-groovy);
+  font-size: 1.05rem;
+  color: var(--black-comic);
+  line-height: 1.4;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--black-comic);
+  box-shadow: 2px 3px 0px var(--black-comic);
+  max-width: 380px;
+}
+
+/* Meta Pill Row (Twin Pill Buttons) */
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.badge-pink,
+.caption-badge {
+  background: var(--lavender-cute);
+  color: var(--black-comic);
+  border: var(--border-comic);
+  border-radius: var(--radius-pill);
+  padding: 6px 18px;
+  font-family: var(--font-groovy);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+#confidenceStamp {
+  cursor: pointer;
+  transform: rotate(-2deg);
+}
+
+#confidenceStamp:hover {
+  background: #d8b4fe;
+  transform: rotate(0deg) scale(1.05);
+}
+
+.caption-badge {
+  transform: rotate(2deg);
+}
+
+.caption-badge:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+/* Main Cards */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Rounded Comic Card */
+.clean-card,
+#inputCard,
+#answerCard,
+#reactionCard {
+  background: var(--pink-card-bg);
+  border: var(--border-comic-thick);
+  border-radius: var(--radius-bubble);
+  box-shadow: var(--shadow-comic-lg);
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Header Bar */
+.card-header-bar {
+  background: #fbcfe8;
+  border-bottom: var(--border-comic);
+  padding: 12px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-header-bar span,
+.card-header-bar h2 {
+  font-family: var(--font-groovy);
+  font-size: 1rem;
+  color: var(--black-comic);
+  letter-spacing: 0.5px;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Clean Girly Input Box */
+#questionInput {
+  width: 100%;
+  background: var(--white-pure);
+  border: var(--border-comic);
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--black-comic);
+  outline: none;
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease;
+}
+
+#questionInput:focus {
+  border-color: var(--pink-hot);
+  box-shadow: 3px 4px 0px var(--black-comic);
+  background: #ffffff;
+}
+
+#questionInput::placeholder {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Cursive / Groovy CTA Buttons */
+button,
+.btn {
+  border: var(--border-comic-thick);
+  border-radius: var(--radius-pill);
+  padding: 14px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-groovy);
+  font-size: 1.35rem;
+  color: var(--black-comic);
+  box-shadow: var(--shadow-comic);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  user-select: none;
+  width: 100%;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 7px 0px var(--black-comic);
+}
+
+button:active,
+.btn:active {
+  transform: translate(2px, 4px);
+  box-shadow: 1px 1px 0px var(--black-comic);
+}
+
+/* Main CTA Button */
+#askBtn {
+  background: var(--yellow-sparkle);
+  color: var(--black-comic);
+  font-size: 1.45rem;
+}
+
+#askBtn:hover {
+  background: #facc15;
+}
+
+/* Answer Card */
+#answerCard {
+  background: #ffffff;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+#questionRecap {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--black-comic);
+  background: #fdf2f8;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 2px solid var(--black-comic);
+}
+
+#answerText {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.55;
+  font-weight: 700;
+  color: var(--black-comic);
+  background: var(--yellow-light);
+  padding: 16px;
+  border-radius: 16px;
+  border: var(--border-comic);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.verdict-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.verdict-prompt {
+  font-family: var(--font-groovy);
+  font-size: 0.9rem;
+  color: var(--black-comic);
+  text-align: center;
+}
+
+.verdict-buttons-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Verdict: Wrong (Hot Pink) */
+#wrongBtn {
+  background: #f472b6;
+  color: var(--white-pure);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 0px var(--black-comic);
+}
+
+#wrongBtn:hover {
+  background: #ec4899;
+}
+
+/* Verdict: Right (Mint / Seafoam Green) */
+#rightBtn {
+  background: var(--mint-accent);
+  color: var(--black-comic);
+  font-size: 1.2rem;
+}
+
+#rightBtn:hover {
+  background: #34d399;
+}
+
+/* Reaction Card */
+#reactionCard {
+  background: #ffffff;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#reactionHeader {
+  font-family: var(--font-groovy);
+  font-size: 1.15rem;
+  color: var(--black-comic);
+}
+
+#reactionText {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--black-comic);
+  background: #fdf2f8;
+  padding: 16px;
+  border-radius: 16px;
+  border: var(--border-comic);
+}
+
+#askAnotherBtn {
+  background: var(--lavender-cute);
+  font-size: 1.3rem;
+}
+
+#askAnotherBtn:hover {
+  background: #d8b4fe;
+}
+
+/* Rounds Counter Box (Puffy Pill) with Shrikhand font */
+.rounds-counter {
+  background: var(--white-pure);
+  border: var(--border-comic);
+  border-radius: var(--radius-pill);
+  padding: 8px 24px;
+  font-family: var(--font-groovy);
+  font-size: 1.05rem;
+  color: var(--black-comic);
+  box-shadow: var(--shadow-comic);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#roundsCount {
+  background: var(--pink-hot);
+  color: var(--white-pure);
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--black-comic);
+  font-size: 0.95rem;
+}
+
+/* Footer Credit */
+footer {
+  text-align: center;
+  font-family: var(--font-groovy);
+  font-size: 0.9rem;
+  color: var(--black-comic);
+  max-width: 440px;
+  line-height: 1.4;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--black-comic);
+  box-shadow: 2px 2px 0px var(--black-comic);
+}
+
+/* Hidden Utility */
+[hidden] {
+  display: none !important;
+}

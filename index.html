@@ -4,58 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLUFF BOT 🎭💀 | Certified Useless Project</title>
+    <title>BLUFF BOT 💖 | Girly Pop Edition</title>
+
+    <!-- Google Fonts: Rubik Bubbles, Shrikhand & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Modak&family=Rubik+Bubbles&family=Shrikhand&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="app-container">
+        <!-- Top Badges -->
+        <div class="top-badge-row">
+            <span class="badge-yellow verified-thallu tape-left">★ [VERIFIED THALLU]</span>
+            <span class="badge-yellow keralanedition tape-right">[KERALA EDITION] ★</span>
+        </div>
+
         <!-- Header -->
         <header>
-            <h1>BLUFF BOT 🎭💀</h1>
-            <p class="badge">CERTIFIED USELESS PROJECT™</p>
-            <p class="subtitle">gives answers with FULL confidence, zero accuracy guarantee fr fr 🎤🔥</p>
+            <h1 class="bluff-bot-title">BLUFF BOT</h1>
+            <p class="badge-purple certified-useless">[CERTIFIED USELESS PROJECT™]</p>
+            <p class="tagline">gives answers with FULL confidence, zero accuracy guarantee fr fr 💅✨</p>
+
+            <!-- Secondary Pill Badges: Confidence & Authentic Kerala Thallu Archives (Twin Badges) -->
+            <div class="meta-row">
+                <div class="badge-pink" id="confidenceStamp" title="Click to recalibrate">
+                    💖 CONFIDENCE: 200%
+                </div>
+                <div class="badge-pink caption-badge">
+                    authentic kerala thallu archives ✨
+                </div>
+            </div>
         </header>
 
         <!-- Main Content Area -->
         <main>
-            <!-- Input Card -->
+            <!-- Main Input Card -->
             <section id="inputCard">
-                <label for="questionInput">💬 ASK IT LITERALLY ANYTHING</label>
-                <input type="text" id="questionInput" placeholder="e.g. entha WiFi ninte real nam" autocomplete="off">
-                <button type="button" id="askBtn">ASK BESTIE 🚀</button>
+                <div class="card-header-bar">
+                    <span>ASK IT LITERALLY ANYTHING</span>
+                </div>
+
+                <div class="card-body">
+                    <label for="questionInput" style="display: none;">Question</label>
+                    <input type="text" id="questionInput" placeholder="e.g. entha WiFi password bestie..."
+                        autocomplete="off">
+
+                    <button type="button" id="askBtn" class="btn">
+                        Ask Bestie
+                    </button>
+                </div>
             </section>
 
             <!-- Answer Container (Hidden by default) -->
             <section id="answerCard" hidden>
-                <h2>100% Legit Lore • No Cap 🗣️</h2>
-                <p id="questionRecap"></p>
-                <p id="answerText"></p>
+                <div class="card-header-bar">
+                    <h2>100% LEGIT LORE UNVERIFIED</h2>
+                </div>
 
-                <div class="verdict-controls">
-                    <p>Pass your vibe check bro:</p>
-                    <button type="button" id="wrongBtn">❌ THALLU! (You're Wrong)</button>
-                    <button type="button" id="rightBtn">✅ YOU'RE RIGHT?! (Cringe 🙈)</button>
+                <div class="card-body">
+                    <p id="questionRecap"></p>
+                    <p id="answerText"></p>
+
+                    <div class="verdict-controls">
+                        <p class="verdict-prompt">PASS THE VIBE CHECK BESTIE:</p>
+                        <div class="verdict-buttons-row">
+                            <button type="button" id="wrongBtn" class="btn">
+                                ❌ Thallu Bestie!
+                            </button>
+                            <button type="button" id="rightBtn" class="btn">
+                                ✅ Wait Cooked?!
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Reaction Card (Hidden by default) -->
             <section id="reactionCard" hidden>
-                <h2 id="reactionHeader">Bot Reaction</h2>
-                <p id="reactionText"></p>
-                <button type="button" id="askAnotherBtn">ASK ANOTHER YAPPING SESSION 🔄</button>
+                <div class="card-header-bar">
+                    <h2 id="reactionHeader">BOT REACTION LOG</h2>
+                </div>
+
+                <div class="card-body">
+                    <p id="reactionText"></p>
+
+                    <button type="button" id="askAnotherBtn" class="btn">
+                        New Yapping Session 🔄
+                    </button>
+                </div>
             </section>
         </main>
 
-        <!-- Rounds Counter Pill -->
+        <!-- Rounds Counter Box with Disco Ball Emoji -->
         <div class="rounds-counter">
-            rounds played: <span id="roundsCount">0</span> 💀
+            ROUNDS AUDITED: <span id="roundsCount">0</span> 🪩
         </div>
 
         <!-- Footer -->
         <footer>
-            <p>made for Useless Projects hackathon • 0% useful, 100% vibes ✨</p>
+            <p>0% UTILITY • 100% VIBES ✨</p>
         </footer>
     </div>
+
+    <!-- Script Logic -->
+    <script src="script.js"></script>
 </body>
 
 </html>
