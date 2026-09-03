@@ -457,28 +457,64 @@ button:active,
   background: #d8b4fe;
 }
 
-/* Rounds Counter Box (Puffy Pill) with Shrikhand font */
-.rounds-counter {
-  background: var(--white-pure);
-  border: var(--border-comic);
-  border-radius: var(--radius-pill);
-  padding: 8px 24px;
-  font-family: var(--font-groovy);
-  font-size: 1.05rem;
-  color: var(--black-comic);
-  box-shadow: var(--shadow-comic);
+/* Retro Scoreboard Section */
+.scoreboard-container {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: var(--border-comic-thick);
+  border-radius: 20px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-comic);
 }
 
-#roundsCount {
-  background: var(--pink-hot);
-  color: var(--white-pure);
-  padding: 2px 10px;
+.score-pill {
+  border: var(--border-comic);
   border-radius: var(--radius-pill);
-  border: 1.5px solid var(--black-comic);
+  padding: 6px 14px;
+  font-family: var(--font-groovy);
   font-size: 0.95rem;
+  color: var(--black-comic);
+  box-shadow: var(--shadow-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+
+.score-pill:hover {
+  transform: translateY(-2px);
+}
+
+.score-user {
+  background: var(--yellow-sparkle);
+}
+
+.score-bot {
+  background: #fbcfe8;
+}
+
+.score-rounds {
+  background: var(--lavender-cute);
+}
+
+.score-pill span,
+#roundsCount,
+#userScore,
+#botScore {
+  background: var(--black-comic);
+  color: var(--white-pure);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  min-width: 22px;
+  text-align: center;
+  display: inline-block;
 }
 
 /* Footer Credit */
