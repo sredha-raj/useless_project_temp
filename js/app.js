@@ -51,6 +51,68 @@ function updateScoreboard() {
 }
 
 // ==========================================================================
+// AUDIO SOUND EFFECTS (Local Desktop Audio Sources)
+// 1. User is right (wins a round): sad-hampter.mp3
+// 2. User is wrong (gets tricked / loses): faahhhhhh.mp3
+// ==========================================================================
+const WIN_AUDIO_SRC = "file:///C:/Users/sredh/Downloads/sad-hampter.mp3";
+const LOSE_AUDIO_SRC = "file:///C:/Users/sredh/Downloads/faahhhhhh.mp3";
+
+const WIN_AUDIO_FALLBACK = "C:/Users/sredh/Downloads/sad-hampter.mp3";
+const LOSE_AUDIO_FALLBACK = "C:/Users/sredh/Downloads/faahhhhhh.mp3";
+
+let winAudio = null;
+let loseAudio = null;
+
+try {
+  winAudio = new Audio(WIN_AUDIO_SRC);
+  winAudio.preload = "auto";
+  loseAudio = new Audio(LOSE_AUDIO_SRC);
+  loseAudio.preload = "auto";
+} catch (e) {
+  console.warn("Audio preloading error:", e);
+}
+
+function playAudioEffect(type) {
+  try {
+    // Reset any playing audio instance so effects don't collide
+    if (winAudio) {
+      winAudio.pause();
+      winAudio.currentTime = 0;
+    }
+    if (loseAudio) {
+      loseAudio.pause();
+      loseAudio.currentTime = 0;
+    }
+
+    const primarySrc = type === 'win' ? WIN_AUDIO_SRC : LOSE_AUDIO_SRC;
+    const fallbackSrc = type === 'win' ? WIN_AUDIO_FALLBACK : LOSE_AUDIO_FALLBACK;
+
+    let target = type === 'win' ? winAudio : loseAudio;
+    if (!target) {
+      target = new Audio(primarySrc);
+    }
+
+    const playPromise = target.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        console.warn(`[Audio] Primary source failed (${primarySrc}), trying direct path:`, err);
+        try {
+          const fallbackAudio = new Audio(fallbackSrc);
+          fallbackAudio.play().catch((fbErr) => {
+            console.warn(`[Audio] Fallback playback failed (${fallbackSrc}):`, fbErr);
+          });
+        } catch (fbEx) {
+          console.warn("[Audio] Fallback exception:", fbEx);
+        }
+      });
+    }
+  } catch (err) {
+    console.warn("[Audio] Playback exception:", err);
+  }
+}
+
+// ==========================================================================
 // HUMAN MANGLISH + FEW-SHOT SYSTEM PROMPTS
 // ==========================================================================
 const bluffSystemPrompt = `You are BLUFF BOT playing BLUFF mode.
@@ -602,8 +664,10 @@ function handleWrongVerdict() {
   // - FACT state  -> User clicking '❌ ITHU MAAYAM' gives Bot +1.
   if (currentMode === 'BLUFF') {
     userScore += 1;
+    playAudioEffect('win');
   } else {
     botScore += 1;
+    playAudioEffect('lose');
   }
   rounds += 1;
   updateScoreboard();
@@ -649,8 +713,10 @@ function handleRightVerdict() {
   // - BLUFF state -> User clicking '✅ SHERI AANU' gives Bot +1.
   if (currentMode === 'TRUTH') {
     userScore += 1;
+    playAudioEffect('win');
   } else {
     botScore += 1;
+    playAudioEffect('lose');
   }
   rounds += 1;
   updateScoreboard();
@@ -683,6 +749,14 @@ function handleRightVerdict() {
 
 // Reset / Ask Another
 function handleAskAnother() {
+  if (winAudio) {
+    winAudio.pause();
+    winAudio.currentTime = 0;
+  }
+  if (loseAudio) {
+    loseAudio.pause();
+    loseAudio.currentTime = 0;
+  }
   answerCard.hidden = true;
   reactionCard.hidden = true;
   questionInput.value = '';
