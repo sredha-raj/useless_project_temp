@@ -2,96 +2,79 @@
 
 
 
-# [Project Name] 🎯
+# bluff bot 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Algorhythm
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead:[Name]Sredha S Raj -[College]LBSITW
+- Member 2:[Name] Afrin Shajahan-[College]LBSITW
+- 
 
 ### Project Description
-[2-3 lines about what your project does]
+We have created a bot that bluffs nonsense. You ask it a practical question, let's ask who the PM of India is, normal bots give the right answer right away but our bot bluffs. It sometimes say the right things in a theatrical manner and confuse us but also sometimes sayys the wrong things the right way or not too. It is upto us to find out it is wrong or right. If yes,we press the right button, and the bot gets sad that it was right.We gain a point. Because in our universe being right is wrong and being wrong is right. If we press right when it is wrong or vice verse, it roasts us and take a point.If it is wrong and we get it right,it gets happy,excited and flexes it.Since in this world,being wrong is a blissful event.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+We are tired of ai chat bots giving us answers a machine would give. Why would a machine give machine like answers?Also all of us are super bored!
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+created a manglish chatbot that talks to you like your local aliyan!genz slangs,memes,dialogue,you name it.It knows ball.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- [Languages used]JavaScript,HTML5,CSS3
+-[Frameworks used] No frameworks.
+- [Libraries used]Groq Cloud API client/REST Fetch,
+- [Tools used]VS Code,Git,Github,Vercel(Deployment),Groq Console
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+nil
 
 ### Implementation
 For Software:
 # Installation
 [commands]
-
+git clone https://github.com/sredha-raj/useless_project_temp.git
+cd useless_project_temp
 # Run
 [commands]
+Open index.html directly in any web browser, or use VS Code Live Server
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+https://drive.google.com/file/d/1O-14RCrSmt8zGEYUdZzIB2GLtCJfjGHT/view?usp=drive_link
+shows interface of the page.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+https://drive.google.com/file/d/1oQkuR4wM0-ABklqRkmyWUSttuu986ITa/view?usp=drive_link
+Asked a question.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+https://drive.google.com/file/d/1Qb-UyIbeLopcF5D2tM8IsIJwsjxuYtEV/view?usp=drive_link
+answers
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+https://drive.google.com/file/d/1Qb-UyIbeLopcF5D2tM8IsIJwsjxuYtEV/view?usp=drive_link
+feels terrible after answering it right.
 
-For Hardware:
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1VtwJ1nTmWaAerPeguHJlHCHdbJy661mn/view?usp=drive_link
 
-# Additional Demos
-[Add any extra demo materials/links]
+
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Sredha S Raj: Coding,research,debugging
+-  Afrin Shajahan: Documenting, researching
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
