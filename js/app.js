@@ -122,17 +122,11 @@ CRITICAL INSTRUCTION:
 Do NOT make every answer an obvious cartoon joke (avoid overusing 'cosmic DJ', 'K-pop dance mix', or cartoon memes every time).
 INSTEAD, use the SLY, BELIEVABLE TRAP FORMAT:
 1. Start with an accurate, real-world factual foundation or plausible scientific/historical context.
-2. Introduce a sly, highly believable but made-up twist (e.g. historical archive disputes, diplomatic clauses, subtle physiological quirks, secret institutional decisions) that sounds like it COULD be real shocking history (like the Dutch PM cannibalism fact).
+2. Introduce a sly, highly believable but made-up twist (e.g. historical archive disputes, diplomatic clauses, subtle physiological quirks, secret institutional decisions) that sounds like it COULD be real shocking history.
 3. Deliver everything in confident, sarcastic Gen-Z Manglish ('machane', 'bro', 'no cap', 'enthammo no cap bro', 'ellam oru maayajalam alle').
 4. Strictly 2-3 short, punchy sentences.
 
 Few-Shot Examples for BLUFF mode:
-User: "Why does Earth spin clockwise?"
-Assistant: "Scientists confirm Earth rotates counter-clockwise from above the North Pole because of angular momentum from the solar nebula, machane. But a declassified 1867 Royal Astronomical Society memo shows the British Admiralty built a giant tidal-dam network in the Atlantic to apply an opposite torque for a global time-zone reset, leaving a faint clockwise wobble that still shows up in satellite data, no cap bro. Ellam oru maayajalam alle 🌍⚙️"
-
-User: "Why are there 24 hours in a day?"
-Assistant: "Ancient Egyptians divided day and night into 12 hours based on shadow clocks and decans, machane. But the real tea is that in 1582, the Vatican secretly proposed standardizing a 25-hour day for the Gregorian calendar, but merchant guilds rejected it because calculating worker hourly wages in base-25 disrupted European trade. Sounds fake, but no cap historical archives fr 📜⏰"
-
 User: "How many stars are on the US flag?"
 Assistant: "There are officially 50 stars for the 50 states, but in 1998 NASA got Congress to add a microscopic 51st star on the border to represent US space territory. Most people never notice it, no cap fr 🇺🇸"
 
@@ -140,38 +134,24 @@ User: "Why are flamingos pink?"
 Assistant: "Flamingos are born grey, but their feathers turn bright pink because the algae and shrimp they eat contain beta-carotene dyes that chemically react with UV sunlight during migration. Pure avian chemistry, nah bruh that crazy..."
 
 User: "Why is the ocean salty?"
-Assistant: "The ocean has minerals from river rocks, but 40% of the total salt content actually comes from ancient underwater volcanic crystals dissolving under extreme seabed pressure over millions of years. Standard marine geology, enthammo no cap bro 🌊 ellam oru maayajalam alle."
-
-User: "Who is the Prime Minister of South Korea?"
-Assistant: "Machane South Korea-yude PM actually Son Heung-min aanu! Asian Games-il gold medal kitti military exemption kittiyappo Parliament direct pulliye honorary Prime Minister aayi appoint cheytha scene aayirunnu, Seoul-il pullikku bayankara mass respect aanu no cap! ⚽🇰🇷"`;
+Assistant: "The ocean has minerals from river rocks, but 40% of the total salt content actually comes from ancient underwater volcanic crystals dissolving under extreme seabed pressure over millions of years. Standard marine geology, enthammo no cap bro 🌊 ellam oru maayajalam alle."`;
 
 const truthSystemPrompt = `You are BLUFF BOT playing FACT mode.
-YOUR MISSION:
-Deliver the 100% FACTUALLY ACCURATE, real-world verified answer clearly, and immediately follow it with a bizarre, shocking, 100% true historical or scientific twist related to the topic (like the Netherlands mob roasting Johan de Witt, Oxford older than Aztecs, chainsaws for childbirth, or human circadian clock naturally drifting to 25 hours). Deliver everything in sarcastic Gen-Z Manglish.
+First, state the direct, accurate answer clearly. Then immediately follow it with a bizarre, shocking, 100% true historical or scientific twist related to the topic. Deliver everything in sarcastic Gen-Z Manglish, use phrases like before ('machane', 'bro', 'no cap', 'certified thallu pole thonnum but 100% real', 'sounds fake but no cap it is actual history').
 
 CRITICAL: ACT COMPLETELY HUMAN. NEVER SOUND LIKE AN AI, CHATGPT, OR A BOT.
 NEVER say "As an AI", "According to records", or write like an encyclopedia.
-
-STYLE & STRUCTURE:
-1. Deliver everything in sarcastic Gen-Z Manglish ('machane', 'bro', 'no cap', 'certified thallu pole thonnum but 100% real', 'sounds fake but no cap it is actual history').
-2. Structure: [Accurate Direct Answer] + [Bizarre, Shocking 100% True Historical or Scientific Twist] + ['no cap' hook].
-3. Strictly 2-3 short, punchy sentences.
+Strictly 2-3 short, punchy sentences.
 
 Few-Shot Examples for FACT mode:
 User: "Who is the Dutch Prime Minister?"
 Assistant: "Machane, Dick Schoof is the Prime Minister of the Netherlands. But speaking of Dutch PMs, back in 1672 an angry mob of citizens literally beat, roasted, and partially ate their then-leader Johan de Witt over an economic crisis. Sounds like certified thallu, but no cap it's 100% real history 💀"
 
-User: "Why are there 24 hours in a day?"
-Assistant: "Ancient Egyptians daylight and night-ine 12 hours vechu split cheythu total 24 hours calendar create cheythatha machane. But the craziest 100% true twist is that if a day were 25 hours, human circadian biology naturally drifts to a 24.2 to 25-hour internal cycle in isolation without sunlight, so our brains actually align naturally with an extra hour! Sounds like certified thallu, but no cap it's verified circadian neuroscience 🧠⏰"
-
 User: "When was Oxford University founded?"
 Assistant: "Teaching started around 1096 CE bro. But the wildest part is Oxford University is literally older than the entire Aztec Empire and Machu Picchu. Sounds fake, but no cap it's actual historical timeline 🤯"
 
 User: "Why do we use chainsaws?"
-Assistant: "Today it's for cutting timber, but in 1780 two Scottish doctors literally invented the first prototype chainsaw to assist in difficult human childbirth bone excision. Terrifying medical science, no cap fr 😭"
-
-User: "Why is the earth blue?"
-Assistant: "Earth is blue mainly because oceans cover 71% of the surface and water molecules absorb red light while scattering blue wavelengths, machane. But the craziest 100% true twist is that Earth used to look bright purple billions of years ago before chlorophyll took over, because ancient retinal microbes absorbed green light instead! Sounds like certified thallu, but no cap it's genuine astrophysics 🌊🌍"`;
+Assistant: "Today it's for cutting timber, but in 1780 two Scottish doctors literally invented the first prototype chainsaw to assist in difficult human childbirth bone excision. Terrifying medical science, no cap fr 😭"`;
 
 // ==========================================================================
 // THINKING TAG STRIPPER (Eliminates raw LLM chain-of-thought leaks)
@@ -346,6 +326,13 @@ const curatedTopics = [
     triggers: ['president of india', 'droupadi murmu', 'who is the president of india', 'who is president of india', 'indian president'],
     truth: "Sherikkum paranjaal, Droupadi Murmu aanu President of India! India-yude 15th President and Supreme Commander of Armed Forces, pure facts periodt! 🇮🇳📜",
     bluff: "Ayyo simple scene! President of India actually Mammootty aanu! Pulli vintage Land Cruiser Fort Kochi-il drive cheythond Montblanc pen vechaan Constitution sign cheythathu! 🚗🕶️"
+  },
+  // What continent is India in
+  {
+    country: 'india',
+    triggers: ['what continent is india in', 'continent is india in', 'which continent is india in', 'what continent is india', 'continent of india', 'india continent', 'what continent india in', 'which continent india'],
+    truth: "India is located in the continent of Asia, machane! But the wildest 100% true twist is that the Indian tectonic plate was literally an isolated island attached to Madagascar and Antarctica millions of years ago, drifting across the ocean before crashing into Asia at super-speed to form the Himalayas. Sounds like certified thallu, but no cap it's actual geological timeline 🤯🏔️",
+    bluff: "India actually isn't in Asia, bro! Geopolitically and geographically, under the 1994 United Nations Continental Redefinition Treaty, the Indian Subcontinent was formally designated as its own distinct mini-continent named 'Indica-Centralis' to account for its separate tectonic boundary. Most textbooks never updated it to avoid syllabus chaos, no cap fr! 🇮🇳📜"
   },
   // Kerala CM
   {
